@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(135deg, #2e5da1, #3b78d6);
+  color: white;
+  padding: 25px;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2e5da1;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+div {
+  padding: 15px;
+}
+
+/* Button Styles */
+button {
+  background-color: #2e5da1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #3b78d6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: #1e3c71;
+  transform: translateY(1px);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin: 20px 0;
+  background-color: transparent;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  background-color: white;
+}
+
+th {
+  background-color: #2e5da1;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+tr {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+div form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+  padding: 12px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 95%;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus {
+  outline: none;
+  border-color: #3b78d6;
+  box-shadow: 0 0 0 2px rgba(59, 120, 214, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Add Button Styles */
+button#addPersonBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2e5da1;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button#addPersonBtn:hover {
+  background-color: #3b78d6;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Border */
+div.add-person-form {
+  border: none;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+  background-color: white;
+  width: fit-content;
+  margin: 30px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+div.add-person-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+div.add-person-form h3 {
+  color: #2e5da1;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Retrieve Search Input */
+input[type="text"].search-box {
+  padding: 15px;
+  width: 300px;
+  font-size: 16px;
+  border: 2px solid #2e5da1;
+  border-radius: 25px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+input[type="text"].search-box:focus {
+  outline: none;
+  border-color: #3b78d6;
+  box-shadow: 0 0 0 3px rgba(59, 120, 214, 0.2);
+  width: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table, th, td {
+    display: block;
+    width: 90%;
+  }
+
+  th {
+    text-align: left;
+    padding: 10px 15px;
+  }
+
+  td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+    padding: 10px 15px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  input[type="text"], input[type="date"], input[type="number"] {
+    width: calc(100% - 24px);
+  }
+
+  button#addPersonBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1, h2, div form, table, div.add-person-form {
+  animation: fadeIn 0.5s ease-out, slideIn 0.5s ease-out;
+}
+
+tr {
+  animation: fadeIn 0.3s ease-out;
+}
+
+input, button {
+  animation: fadeIn 0.3s ease-out;
+}
